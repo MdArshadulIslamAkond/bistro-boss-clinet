@@ -38,8 +38,9 @@ const Cart = () => {
     });
   };
   return (
-    <div className="mx-40 w-">
+    <div className="md:mx-40">
       <SectionTaitle subHeading={"my cart"} heading={"WANNA ADD MORE?"} />
+      <div className=" bg-white md:p-6">
       <div>
         <button onClick={()=>{
             setAsc(!asc);
@@ -48,7 +49,7 @@ const Cart = () => {
         {asc ? "Price: High to Low" : "Price: Low to High"}
         </button>
       </div>
-      <div className="flex justify-between items-center mb-8">
+      <div className="md:flex justify-between items-center mb-8 space-y-2">
         <h2 className="uppercase text-2xl">Total orders: {cart.length}</h2>
         <h2 className="uppercase text-2xl">Total price: ${totalPrice}</h2>
         {
@@ -101,6 +102,7 @@ const Cart = () => {
             ))}
           </tbody>
         </table>
+      </div>
       </div>
     </div>
   );

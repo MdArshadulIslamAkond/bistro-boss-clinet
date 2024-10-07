@@ -1,6 +1,6 @@
 import FoodCard from "../../../components/FoodCard/FoodCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./styles.css";
+import "./orderTab.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -34,8 +34,8 @@ const OrderTabPanel = ({ items }) => {
       <Swiper
         pagination={pagination}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next1",
+          prevEl: ".swiper-button-prev1",
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper"
@@ -55,8 +55,8 @@ const OrderTabPanel = ({ items }) => {
         ))}
       </Swiper>
       {/* Custom navigation buttons */}
-      <div className="swiper-button-prev"> &lt; </div> {/* Left arrow */}
-      <div className="swiper-button-next"> &gt; </div> {/* Right arrow */}
+      <div className="swiper-button-prev1"> &lt; </div> {/* Left arrow */}
+      <div className="swiper-button-next1"> &gt; </div> {/* Right arrow */}
     </div>
   );
 };

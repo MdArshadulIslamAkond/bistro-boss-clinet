@@ -91,7 +91,7 @@ const Navber = () => {
   );
   return (
     <>
-      <div className="navbar fixed z-10 bg-opacity-30 bg-base-100 max-w-screen-xl mx-auto items-center">
+      <div className="navbar fixed z-10 bg-opacity-30 bg-base-100 max-w-screen-xl mx-auto justify-between items-center">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -117,10 +117,10 @@ const Navber = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-white">
+          <p className="btn btn-ghost text-xl text-white">
             BISTRO BOSS <br /> Restaurant
-          </a>
-          <a href=""></a>
+          </p>
+          {/* <a href=""></a> */}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 items-center">

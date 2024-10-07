@@ -17,10 +17,13 @@ import {
   Sector,
   Legend,
 } from "recharts";
+import { Box } from "@mui/material";
+import { Dashboard } from "@mui/icons-material";
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const AdminHome = () => {
+  console.log("Admin");
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
   const { data: stats = [] } = useQuery({
@@ -85,12 +88,13 @@ const AdminHome = () => {
     );
   };
 
-  const pieChartData = chartData.map(data => {
+  const pieChartData = chartData.map((data) => {
     return {
       name: data.category,
       value: data.revenue,
     };
   });
+
   return (
     <div className="ms-6 me-12">
       <h2 className="text-3xl">
@@ -170,7 +174,6 @@ const AdminHome = () => {
           </div>
           <div className="w-1/2">
             <PieChart width={400} height={400}>
-            
               <Pie
                 data={pieChartData}
                 cx="50%"

@@ -70,7 +70,7 @@ const AddItems = () => {
               className="input input-bordered w-full"
             />
           </label>
-          <div className="flex gap-6 my-6">
+          <div className="md:flex gap-6 my-6">
             {/* Category */}
             <label className="form-control w-full">
               <div className="label">

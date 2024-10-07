@@ -29,7 +29,7 @@ const Tastimonials = () => {
         subHeading={"What Our Clients Say"}
         heading={"TESTIMONIALS"}
       />
-      <div className="mx-[200px] relative border">
+      <div className="md:mx-[200px] relative">
         <Swiper
           // navigation={true}
           navigation={{
@@ -55,8 +55,8 @@ const Tastimonials = () => {
           ))}
         </Swiper>
         {/* Custom navigation buttons */}
-        <div className="swiper-button-prev"> &lt; </div> 
-        <div className="swiper-button-next"> &gt; </div> 
+        <div className="swiper-button-prev"> </div> 
+        <div className="swiper-button-next"> </div> 
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
+import SectionTaitle from "../../../components/SectionTaitle/SectionTaitle";
 
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
@@ -57,7 +58,8 @@ const AllUsers = () => {
 
   return (
     <div>
-      <div className="flex justify-evenly my-4">
+      <SectionTaitle heading='manage all users' subHeading='How Many??' />
+      <div className="flex justify-evenly my-14">
         <h2 className="text-3xl">All Users</h2>
         <h2 className="text-3xl">Total Users: {users.length}</h2>
       </div>

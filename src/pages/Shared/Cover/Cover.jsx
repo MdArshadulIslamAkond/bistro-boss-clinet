@@ -11,7 +11,7 @@ const Cover = ({ img, title, height, color = false }) => {
       <div className={`hero min-h-[${height}px]`} >
         <div className="hero-overlay bg-opacity-0"></div>
         
-        <div className={`hero-content text-neutral-content h-[300px] text-center ${color ? 'bg-white text-black' :' bg-[rgba(21,21,21,.6)]' }`}>
+        <div className={`hero-content w-4/5 h-[300px] text-center ${color ? 'bg-white' :' bg-[rgba(21,21,21,.6)]' }`}>
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold uppercase">{title}</h1>
             <p className="mb-5">

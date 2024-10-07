@@ -6,7 +6,7 @@ import ContactForm from "../ContactForm/ContactForm";
 const Contact = () => {
     return (
         <div>
-            <Cover img={img} title={'CONTACT US'} height='700' />
+            <Cover img={img} title={'CONTACT US'} height='550' />
             <Location />
             <ContactForm />
         </div>

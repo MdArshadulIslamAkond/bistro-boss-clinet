@@ -3,7 +3,7 @@ import moment from "moment";
 const Footer = () => {
   return (
     <footer>
-      <div className="footer text-neutral-content grid grid-cols-2 gap-0 p-0">
+      <div className="footer text-neutral-content grid md:grid-cols-2 gap-0 p-0">
         {/* className=" " */}
         <aside className="w-full h-full bg-[#1F2937] text-center">
           <div className="place-self-end pe-32 pt-10 pb-10">
@@ -18,8 +18,8 @@ const Footer = () => {
             </p>
           </div>
         </aside>
-        <nav className="bg-[#111827] w-full h-full text-center ">
-          <div className="place-self-start ps-32 pe-32 pt-10 ">
+        <aside className="bg-[#111827] w-full h-full text-center ">
+          <div className="place-self-start ps-32 md:px-32 pt-10 ">
             <h6 className="text-white text-xl font-medium mb-6">Follow US</h6>
             <p>
             Join us on social media
@@ -60,7 +60,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </nav>
+        </aside>
       </div>
       <div className="footer-center bg-black text-white p-4">
         <aside>
