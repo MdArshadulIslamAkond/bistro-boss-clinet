@@ -116,11 +116,11 @@ import UserHome from "../pages/Dashboard/UserHome/UserHome";
         },
         {
           path: 'payment',
-          element: <Payment />,
+          element:<AdminRoute><Payment /></AdminRoute>,
         },
         {
           path: 'paymentHistory',
-          element: <PaymentHistory />,
+          element: <AdminRoute><PaymentHistory /></AdminRoute>,
         },
       ]
     },

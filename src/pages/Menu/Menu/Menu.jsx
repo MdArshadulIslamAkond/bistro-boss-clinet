@@ -23,7 +23,7 @@ const Menu = () => {
         <title>Bistro Boss | Menu</title>
         {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
       </Helmet>
-      <Cover img={menuImg} title='our menu' height='800' />
+      <Cover img={menuImg} title='our menu' height={550} />
       {/* main cover */}
       <SectionTaitle subHeading={"Don't miss"} heading={"TODAY'S OFFER"} />
       {/* offered menu items */}

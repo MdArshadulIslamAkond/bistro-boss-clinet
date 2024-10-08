@@ -9,12 +9,11 @@ const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isAdmin] = useAdmin();
   const [cart] = useCart();
+
   const handleLogOut = () => {
     logOut();
   };
-  // if(isAdminLoading){
-  //   return <progress className="progress w-56"></progress>;
-  // }
+
   const navLinkStyle = ({ isActive, isPending }) => {
     return {
       fontWeight: isActive ? "bold" : "",
@@ -35,15 +34,10 @@ const Navber = () => {
           CONTACT US
         </NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/dashboard" style={navLinkStyle}>
-          DASHBOARD
-        </NavLink>
-      </li> */}
       {user && !isAdmin && (
         <li>
           <NavLink to="/dashboard/userHome" style={navLinkStyle}>
-          DASHBOARD
+            DASHBOARD
           </NavLink>
         </li>
       )}
@@ -64,6 +58,7 @@ const Navber = () => {
           ORDER FOOD
         </NavLink>
       </li>
+
       <li>
         <NavLink to="/dashboard/cart" style={navLinkStyle}>
           <button className="btn justify-center items-center">
@@ -72,7 +67,7 @@ const Navber = () => {
           </button>
         </NavLink>
       </li>
-      
+
       {!user && (
         <>
           <li>

@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { FaArrowLeft } from "react-icons/fa";
 
 // type Inputs = {
 //     example: string
@@ -72,9 +73,15 @@ const SignUp = () => {
         <title>Bistro Boss | SignUp</title>
         {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
       </Helmet>
-      <div className="">
-        <div className="hero bg-[url('/src/assets/others/authentication.png')] px-40 pb-36 pt-28 mx-auto">
-          <div className="hero-content flex-col lg:flex-row-reverse bg-[url('/src/assets/others/authentication.png')] shadow-2xl">
+      <div className="hero bg-[url('/src/assets/others/authentication.png')] px-40 pb-36 pt-28 mx-auto">
+        <div className="bg-[url('/src/assets/others/authentication.png')] shadow-2xl">
+          <Link to="/">
+            <p className=" text-end pt-10 pe-10 text-[#E6923F] text-xl">
+              <FaArrowLeft className="inline-block me-2" />
+              Go To Home
+            </p>
+          </Link>
+          <div className="hero-content flex-col lg:flex-row-reverse ">
             <div className="text-center md:w-1/2 lg:text-left">
               <figure className="py-6">
                 <img src={img} alt="Shoes" className="" />
@@ -211,7 +218,7 @@ const SignUp = () => {
                   </small>
                 </p>
                 <p className="text-center mt-6">Or sign in with</p>
-                <SocialLogin/>
+                <SocialLogin />
               </div>
             </div>
           </div>

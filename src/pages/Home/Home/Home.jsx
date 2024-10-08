@@ -22,7 +22,7 @@ const Home = () => {
       </Helmet>
       <Banner />
       <Category />
-      <Cover img={img} color={'bg-White'} title={'Bistro Boss'} height='550' />
+      <Cover img={img} color={'bg-White'} title={'Bistro Boss'} height={550} />
       <PopularMenu />
       <CallUs />  
       <Chef />

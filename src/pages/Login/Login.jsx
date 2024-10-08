@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Login = () => {
   // const captchaRef = useRef(null);
@@ -21,7 +22,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   // console.log(from);
   useEffect(() => {
-    loadCaptchaEnginge(6, "green");
+    loadCaptchaEnginge(6, "#E6923F", "white");
   }, []);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,18 +33,19 @@ const Login = () => {
     const password = form.get("password");
     // console.log(email, password);
     signin(email, password)
-    .then((result) => {
-      const user = result.user;
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
-        timer: 1500
-      });
-      // navigate(from, {replace: true});
-      navigate(from, { replace: true });
-    }).catch((err) => console.error(err));
+      .then((result) => {
+        const user = result.user;
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // navigate(from, {replace: true});
+        navigate(from, { replace: true });
+      })
+      .catch((err) => console.error(err));
   };
   const handleValidateCaptcha = (e) => {
     const user_captcha_value = e.target.value;
@@ -60,14 +62,18 @@ const Login = () => {
         <title>Bistro Boss | Login</title>
         {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
       </Helmet>
-      <div className="">
-        <div className="hero bg-[url('/src/assets/others/authentication.png')] px-40 pb-36 pt-28  mx-auto ">
-          <div className="hero-content flex-col lg:flex-row bg-[url('/src/assets/others/authentication.png')] shadow-2xl">
-            <div className="text-center md:w-1/2 lg:text-left">
+      <div className="hero bg-[url('/src/assets/others/authentication.png')] px-40 pb-36 pt-28  mx-auto ">
+        <div className="bg-[url('/src/assets/others/authentication.png')] shadow-2xl">
+          <Link to='/'>
+          <p className=" pt-10 ps-10 text-[#E6923F] text-xl"><FaArrowLeft className="inline-block me-2" />Go To Home</p>
+          </Link>
+          <div className="hero-content flex-col lg:flex-row ">
+            <div className="md:w-1/2 text-center lg:text-left">
               <figure className="py-6">
                 <img src={img} alt="Shoes" className="" />
               </figure>
             </div>
+
             <div className="card w-full max-w-sm md:w-1/2">
               <h1 className="text-5xl font-bold text-center">Login</h1>
               <form onSubmit={handleLogin} className="card-body">
