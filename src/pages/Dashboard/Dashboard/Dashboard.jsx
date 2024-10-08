@@ -389,9 +389,9 @@ const Dashboard = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Box  
+      <Box
         component="nav"
-        sx={{width: { sm: 120 }, flexShrink: { sm: 0 }}}
+        sx={{ width: { sm: 120 }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -437,9 +437,10 @@ const Dashboard = () => {
           p: 0,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           backgroundColor: "#f6f6f6",
+          // border: "1px solid #ce0f0f",
         }}
       >
-        <Toolbar />
+        {/* <Toolbar /> */}
         <Outlet />
       </Box>
     </Box>

@@ -20,10 +20,10 @@ const PaymentHistory = () => {
     },
   });
   return (
-    <div className="md:mx-40">
+    <div className="md:mx-40 pb-36">
       <SectionTaitle heading="PAYMENT HISTORY" subHeading="At a Glance!" />
 
-      <div className="bg-white p-4">
+      <div className="bg-white md:p-12">
         <div className="text-center">
           <button
             onClick={() => {

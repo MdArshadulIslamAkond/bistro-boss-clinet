@@ -56,8 +56,8 @@ const UpdateItem = () => {
     }
   };
   return (
-    <div>
-      <h2 className="text-3xl text-center my-16">Update Item</h2>
+    <div className="bg-white md:px-36 md:pb-36">
+      <h2 className="text-3xl text-center py-16">Update Item</h2>
       <section className="bg-[#F3F3F3] p-12">
         <div>
           <form onSubmit={handleSubmit(onSubmit)}>

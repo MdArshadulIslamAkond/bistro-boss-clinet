@@ -50,20 +50,22 @@ const AddReview = () => {
           heading="Give a Review..."
           subHeading="Sharing is Caring!!!"
         />
-        <section className="bg-[#F3F3F3] text-center md:px-32 py-12">
-          <h2 className="text-3xl">RATE US</h2>
-          <div className="my-6">
-            <Rating
-              value={rating}
-              onChange={(value) => setRating(value)}
-              emptySymbol={<span className="text-gray-300 text-sm">&#9734;</span>} // Empty star
-              fullSymbol={<span className="text-yellow-500 text-sm">&#9733;</span>} // Filled star
-            />
-            {/* <p>Your Rating: {rating}</p> */}
+        <section className="bg-[#F3F3F3] md:px-32 py-12">
+          <div className="text-center">
+            <h2 className="text-3xl">RATE US</h2>
+            <div className="my-6 flex justify-center items-center">
+              <Rating
+                value={rating}
+                onChange={(value) => setRating(value)}
+                style={{ maxWidth: 200, }}
+                
+              />
+              {/* <p>Your Rating: {rating}</p> */}
+            </div>
           </div>
           <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <label className="form-control w-full max-w-xs">
+              <label className="form-control w-full">
                 <div className="label">
                   <span className="label-text">
                     Which recipe you liked most?
@@ -75,10 +77,10 @@ const AddReview = () => {
                     required: "This field is required",
                   })}
                   placeholder="Recipe you liked most"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full"
                 />
               </label>
-              <label className="form-control w-full max-w-xs ">
+              <label className="form-control w-full">
                 <div className="label">
                   <span className="label-text">
                     Do you have any suggestion for us?
@@ -90,10 +92,10 @@ const AddReview = () => {
                     required: "This field is required",
                   })}
                   placeholder="suggestion"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full"
                 />
               </label>
-              <label className="form-control w-full max-w-xs">
+              <label className="form-control w-full">
                 <div className="label">
                   <span className="label-text">
                     Kindly express your care in a short way.
@@ -103,7 +105,7 @@ const AddReview = () => {
                   {...register("details", {
                     required: "This field is required",
                   })}
-                  className="textarea textarea-bordered h-24 max-w-xs"
+                  className="textarea textarea-bordered h-24"
                   placeholder="Review in detail"
                 ></textarea>
               </label>

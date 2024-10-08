@@ -144,7 +144,7 @@ const AdminHome = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex bg-white my-8">
           <div className="w-1/2">
             <BarChart
               width={500}
@@ -191,7 +191,7 @@ const AdminHome = () => {
                   />
                 ))}
               </Pie>
-              <Legend verticalAlign="top" height={36}></Legend>
+              <Legend verticalAlign="top"  iconType="diamond" height={36}></Legend>
             </PieChart>
           </div>
         </div>

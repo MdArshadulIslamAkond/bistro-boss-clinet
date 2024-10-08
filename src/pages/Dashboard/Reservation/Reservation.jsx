@@ -14,7 +14,7 @@ const Reservation = () => {
     console.log(data);
   };
   return (
-    <div className="bg-white m-0 p-4">
+    <div className="bg-white p-4">
       <div className="md:mx-6">
         <SectionTaitle heading="book a table" subHeading="Reservation" />
         <section className="md:ms-36">
@@ -125,7 +125,7 @@ const Reservation = () => {
                 <FaClock className=" text-2xl mx-auto" />
               </div>
             </div>
-            <div className="grid md:grid-cols-3 justify-items-center items-center bg-[#F3F3F3] py-6 gap-y-2">
+            <div className="md:grid grid-cols-3 justify-items-center items-center bg-[#F3F3F3] md:py-16 max-sm:space-y-6">
               <div>
                 <h6 className="text-2xl">PHONE</h6>
                 <p>+38 (012) 34 56 789</p>

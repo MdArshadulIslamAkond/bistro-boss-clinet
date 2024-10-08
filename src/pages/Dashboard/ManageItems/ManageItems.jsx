@@ -37,9 +37,9 @@ const ManageItems = () => {
     });
   };
   return (
-    <div>
+    <div className="md:px-36 pb-36">
       <SectionTaitle heading="MANAGE ALL ITEMS" subHeading="Hurry Up!" />
-      <section>
+      <section className="bg-white md:p-12">
         <h2 className="text-3xl">TOTAL ITEMS: {menu.length}</h2>
         <div className="overflow-x-auto rounded-lg">
           <table className="table">
