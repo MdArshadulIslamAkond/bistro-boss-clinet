@@ -19,7 +19,7 @@ const Login = () => {
   const location = useLocation();
   // let from = location.state?.from?.pathName || '/';
   const from = location.state?.from?.pathname || "/";
-  console.log(from);
+  // console.log(from);
   useEffect(() => {
     loadCaptchaEnginge(6, "green");
   }, []);
@@ -47,7 +47,7 @@ const Login = () => {
   };
   const handleValidateCaptcha = (e) => {
     const user_captcha_value = e.target.value;
-    console.log(user_captcha_value);
+    // console.log(user_captcha_value);
     if (validateCaptcha(user_captcha_value) == true) {
       setDisabled(false);
     } else {

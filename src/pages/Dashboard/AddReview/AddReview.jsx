@@ -38,7 +38,7 @@ const AddReview = () => {
         });
         reset();
         setRating(0);
-        console.log(result.data);
+        // console.log(result.data);
       }
     });
   };

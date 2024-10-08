@@ -13,7 +13,7 @@ const AdminRoute = ({children}) => {
     if(user && isAdmin){
         return children;
     }
-    console.log(location);
+    // console.log(location);
     return <Navigate to='/' state={{from: location}} replace/>;
 };
 

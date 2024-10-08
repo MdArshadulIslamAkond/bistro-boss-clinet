@@ -9,14 +9,14 @@ const SocialLogin = () => {
   const navigate = useNavigate();
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
-      console.log(result);
+      // console.log(result);
       const userInfo ={
         email: result.user?.email,
         name: result.user?.displayName
       }
       axiosPublic.post('/users', userInfo)
       .then((result) =>{
-        console.log(result.data);
+        // console.log(result.data);
         navigate('/');
       })
     });

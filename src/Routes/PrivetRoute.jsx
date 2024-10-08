@@ -14,7 +14,7 @@ const location = useLocation();
     if(user){
         return children;
     }
-    console.log(location);
+    // console.log(location);
     return <Navigate to='/login' state={{from: location}} replace/>;
 };
 

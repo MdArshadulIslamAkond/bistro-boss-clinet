@@ -11,7 +11,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Send the form data to the server
-    console.log("Captcha");
+    // console.log("Captcha");
     setCapVal(null);
   };
   return (

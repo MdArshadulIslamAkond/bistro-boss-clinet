@@ -15,7 +15,7 @@ const UpdateItem = () => {
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
   const { _id, name = "", recipe = "", image="", price = "", category = "" } = data;
-  console.log(_id, name, image, recipe, price, category);
+  // console.log(_id, name, image, recipe, price, category);
   // const axiosSecure = useAxiosSecure();
   const {
     register,
@@ -26,7 +26,7 @@ const UpdateItem = () => {
     defaultValues: { name, recipe, price, category },
   });
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     const imageFile = { image: data.image[0] };
     const res = await axiosPublic.post(image_hosting_api, imageFile, {
       headers: {
@@ -52,7 +52,7 @@ const UpdateItem = () => {
           timer: 1500,
         });
       }
-      console.log(updatedata.data);
+      // console.log(updatedata.data);
     }
   };
   return (

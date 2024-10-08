@@ -51,7 +51,7 @@ const PaymentForm = () => {
       //   console.log("[error]", error);
       setError(error.message);
     } else {
-      console.log("[PaymentMethod]", paymentMethod);
+      // console.log("[PaymentMethod]", paymentMethod);
       setError("");
     }
 
@@ -68,9 +68,9 @@ const PaymentForm = () => {
     if (confirmError) {
       console.log("[confirmEerror]", confirmError);
     } else {
-      console.log("[paymentIntent]", paymentIntent);
+      // console.log("[paymentIntent]", paymentIntent);
       if (paymentIntent.status === "succeeded") {
-        console.log("transaction id;", paymentIntent.id);
+        // console.log("transaction id;", paymentIntent.id);
         setTransactionId(paymentIntent.id);
         // now save the transaction in the database
         const payment = {
@@ -83,7 +83,7 @@ const PaymentForm = () => {
           status: "panding",
         };
         const res = await axiosSecure.post("/payments", payment);
-        console.log(res.data);
+        // console.log(res.data);
         refetch();
         if(res.data?.paymentResult?.insertedId){
             Swal.fire({

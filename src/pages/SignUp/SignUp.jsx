@@ -24,7 +24,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     creatUser(data.email, data.password)
       .then((result) => {
         // console.log(result.user);

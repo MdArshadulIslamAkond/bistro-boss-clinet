@@ -11,7 +11,7 @@ const Reservation = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
   };
   return (
     <div className="bg-white p-4">

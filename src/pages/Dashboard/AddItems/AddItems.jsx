@@ -18,7 +18,7 @@ const AddItems = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     // image upload to imgbb and then get an url
     // const imageFile = new FormData();
     // imageFile.append("image", data.image[0]);
@@ -28,7 +28,7 @@ const AddItems = () => {
         "Content-Type": "multipart/form-data",
       },
     });
-    console.log("with image url", res.data);
+    // console.log("with image url", res.data);
     if (res.data.success) {
       // new send the menu item data  to the server with the image
       const menuItem = {
@@ -39,7 +39,7 @@ const AddItems = () => {
         image: res.data.data.display_url,
       };
       const menuRes = await axiosSecure.post("/menu", menuItem);
-      console.log(menuRes.data);
+      // console.log(menuRes.data);
       if (menuRes.data.insertedId) {
         reset();
         Swal.fire({
