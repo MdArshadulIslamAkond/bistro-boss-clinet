@@ -8,7 +8,7 @@ import { FaCalendarAlt, FaPhoneVolume, FaStar } from "react-icons/fa";
 const UserHome = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
-  console.log(user);
+  // console.log(user);
   const { data: stats = [] } = useQuery({
     queryKey: ["user-stats", user?.email],
     queryFn: async () => {

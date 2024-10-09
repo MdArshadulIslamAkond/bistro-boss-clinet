@@ -1,21 +1,21 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
   validateCaptcha,
 } from "react-simple-captcha";
-import { AuthContext } from "../../provider/AuthProvider";
 import img from "../../assets/others/authentication2.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { FaArrowLeft } from "react-icons/fa";
+import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
   // const captchaRef = useRef(null);
   const [disabled, setDisabled] = useState(true);
-  const { signin } = useContext(AuthContext);
+  const { signin } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   // let from = location.state?.from?.pathName || '/';
@@ -64,8 +64,11 @@ const Login = () => {
       </Helmet>
       <div className="hero bg-[url('/src/assets/others/authentication.png')] px-40 pb-36 pt-28  mx-auto ">
         <div className="bg-[url('/src/assets/others/authentication.png')] shadow-2xl">
-          <Link to='/'>
-          <p className=" pt-10 ps-10 text-[#E6923F] text-xl"><FaArrowLeft className="inline-block me-2" />Go To Home</p>
+          <Link to="/">
+            <p className=" pt-10 ps-10 text-[#E6923F] text-xl">
+              <FaArrowLeft className="inline-block me-2" />
+              Go To Home
+            </p>
           </Link>
           <div className="hero-content flex-col lg:flex-row ">
             <div className="md:w-1/2 text-center lg:text-left">

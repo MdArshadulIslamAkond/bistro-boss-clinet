@@ -26,6 +26,7 @@ const PaymentHistory = () => {
       <div className="bg-white md:p-12">
         <div className="text-center">
           <button
+          disabled = {payments.length <= 0}
             onClick={() => {
               setAsc(!asc);
               // refetch();

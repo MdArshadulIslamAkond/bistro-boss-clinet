@@ -43,6 +43,7 @@ const Cart = () => {
       <div className=" bg-white md:p-6">
         <div>
           <button
+          disabled = {cart.length <= 0}
             onClick={() => {
               setAsc(!asc);
               // refetch();
